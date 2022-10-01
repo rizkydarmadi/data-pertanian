@@ -1,3 +1,4 @@
+from re import S
 import pandas as pd
 import streamlit as st
 import numpy as np
@@ -25,6 +26,7 @@ st.sidebar.markdown("""# Table of contents
 #! this is title
 st.write("# Data hasil produksi pertanian dan pemanasan global Indonesia")
 st.write('Pemanasan global adalah kejadian meningkatnya temperatur rata-rata atmosfer,laut dan daratan Bumi. Permasalahan teresebut menyebabkan meningkatnya suhu global diperkirakan akan menyebabkan perubahan-perubahan yang lain seperti naiknya permukaan air laut, meningkatnya intensitas fenomena cuaca yang ekstrim, Akibat-akibat dari meningkatnya suhu global diantaranya adalah terpengaruhnya hasil pertanian.')
+st.write(':signal_strength:  [Coba Prediksi](#prediksi-suhu-rata-rata-4-tahun-ke-depan)')
 
 #! hasil tani 2000 - 2021
 top_provinsi = pd.read_csv('dataset/top_provinsi_2000-2021.csv')
@@ -206,7 +208,7 @@ df001
 
 number = st.number_input('masukan Suhu rata-rata',26.30)
 prediksi_apel_malang = model_2.predict([[number]])
-st.write(f'#### Hasil prediksi apel malang pada suhu {number} adalah {prediksi_k_merah[0]} ton')
+st.write(f'#### Hasil prediksi apel malang pada suhu {number} adalah {prediksi_apel_malang[0]} ton')
 
 if st.checkbox('Tabel suhu rata-rata dan produksi apel malang'):
     df3
@@ -227,7 +229,6 @@ st.write('## Kesimpulan')
 st.write('under maintenance')
 
 #! disclaimer
-st.write('#### Disclaimer')
 st.write('Seluruh data yang ada di dalam penelitian ini bersumber dari [Badan pusat statistik](https://www.bps.go.id), [World bank](https://climatedata.worldbank.org/ClimateAPIWeb/rest/v2/crunew/cru-ts4.06-timeseries/tas/annual/timeseries/1901-2021/country/IDN) dan penelitian terdahulu.')
 
 

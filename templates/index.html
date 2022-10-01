@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/ico">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive Website Travel</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Rizky Darmadi</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">Preview</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <img src="assets/img/seed.jpg" alt="" class="home__img">
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">Machine Learning</span>
+                        <h1 class="home__data-title"><b></b>Dampak Pemanasan Global <br> Terhadap Hasil Pertanian</b></h1>
+                        <a href="http://127.0.0.1:8501/" class="button">Explore</a>
+
+                    </div>
+
+                    <!-- <div class="home__info">
+                        <div>
+                            <span class="home__info-title">5 best places to visit</span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="assets/img/home2.jpg" alt="" class="home__info-img">
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">Informasi Detail<br> Tentang dampak pemasan global terhadap hasil pertanian</h2>
+                        <p class="about__description">Pemanasan global adalah kejadian meningkatnya temperatur rata-rata atmosfer,laut dan daratan Bumi. Permasalahan teresebut menyebabkan meningkatnya suhu global diperkirakan akan menyebabkan perubahan-perubahan yang lain seperti naiknya permukaan air laut, meningkatnya intensitas fenomena cuaca yang ekstrim, Akibat-akibat dari meningkatnya suhu global diantaranya adalah terpengaruhnya hasil pertanian.</p>
+                        <a href="http://127.0.0.1:8501/#total-produksi-pertanian-seluruh-provinsi-dari-tahun-2000-hingga-2021" class="button">Details</a>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img style="width: 500px;" src="assets/img/apel_malang.png" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== DISCOVER ====================-->
+        
+
+            <!--==================== EXPERIENCE ====================-->
+            <!--==================== VIDEO ====================-->
+            <section class="video section">
+                <h2 class="section__title">Kenaikan Suhu rata-rata</h2>
+
+                <div class="video__container container">
+                    <p class="video__description">Kenaikan suhu bergerak lurus naik seiring dengan berjalanya waktu
+                    </p>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img style="width: 500px;" src="assets/img/mean_temp.png" alt="" class="about__img-two">
+                        </div>
+                    </div>
+
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="assets/img/mean_temp.png" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <a href="http://127.0.0.1:8501/#korelasi-rata-rata-suhu-dengan-tahun-di-indonesia" class="button">Details</a>
+                        </button>
+                    </div>
+                </div> 
+            </section>
+
+            <!--==================== PLACES ====================-->
+           
+
+            <!--==================== SUBSCRIBE ====================-->
+
+            
+            <!--==================== SPONSORS ====================-->
+
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__rights" style="justify-content: center;">
+                    <p class="footer__copy">&#169; 2022 Rizkyd. All rigths reserved.</p>
+
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
