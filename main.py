@@ -1,3 +1,4 @@
+from re import S
 import pandas as pd
 import streamlit as st
 import numpy as np
@@ -12,14 +13,14 @@ st.sidebar.text('')
 st.sidebar.text('')
 st.sidebar.text('')
 st.sidebar.markdown("""# Table of contents
-- ##### [Home](#data-hasil-produksi-pertanian-dan-pemanasan-global-indonesia)
-- ##### [Total produksi pertanian seluruh provinsi dari tahun 2000 hingga 2021 ](#total-produksi-pertanian-seluruh-provinsi-dari-tahun-2000-hingga-2021)
-- ##### [Grafik rata-rata suhu sejak tahun 1900 - 2021 di Indonesia](#grafik-rata-rata-suhu-sejak-tahun-1900---2021-di-Indonesia)
-- ##### [Korelasi rata-rata suhu dengan tahun di Indonesia](#korelasi-rata-rata-suhu-dengan-tahun-di-indonesia)
-- ##### [Data produksi hasil pertanian tahunan di Indonesia](#data-produksi-hasil-pertanian-tahunan-di-indonesia)
-- ##### [Korelasi mean temperature dengan kacang merah](#korelasi-mean-temperature-dengan-kacang-merah)
-- ##### [Korelasi mean temperature dengan apel malang](#korelasi-mean-temperature-dengan-apel-malang)
-- ##### [Jenis hasil produksi pertanian terbanyak dari tahun 2000 hingga 2021](#jenis-hasil-produksi-pertanian-terbanyak-dari-tahun-2000-hingga-2021)
+- [Home](http://localhost/home/)
+- [Total produksi pertanian seluruh provinsi dari tahun 2000 hingga 2021 ](#total-produksi-pertanian-seluruh-provinsi-dari-tahun-2000-hingga-2021)
+- [Grafik rata-rata suhu sejak tahun 1900 - 2021 di Indonesia](#grafik-rata-rata-suhu-sejak-tahun-1900---2021-di-Indonesia)
+- [Korelasi rata-rata suhu dengan tahun di Indonesia](#korelasi-rata-rata-suhu-dengan-tahun-di-indonesia)
+- [Data produksi hasil pertanian tahunan di Indonesia](#data-produksi-hasil-pertanian-tahunan-di-indonesia)
+- [Korelasi mean temperature dengan kacang merah](#korelasi-mean-temperature-dengan-kacang-merah)
+- [Korelasi mean temperature dengan apel malang](#korelasi-mean-temperature-dengan-apel-malang)
+- [Jenis hasil produksi pertanian terbanyak dari tahun 2000 hingga 2021](#jenis-hasil-produksi-pertanian-terbanyak-dari-tahun-2000-hingga-2021)
                       """)
 
 #! this is title
@@ -104,7 +105,7 @@ d = st.date_input(
 
 prediksi_tahun = model_2.predict([[d.year]])
 
-st.write(f'#### Hasil Prediksi Suhu Rata-Rata Pada Tahun {d.year} adalah {prediksi_tahun[0]} celcius')
+st.write(f'#### Hasil Prediksi Suhu Rata-Rata Pada Tahun {d.year} adalah {round(prediksi_tahun[0],2)} celcius')
 
 #! hasil tani tahunan
 top_anual_value = pd.read_csv('dataset/anual_value.csv')
@@ -165,7 +166,7 @@ df001
 
 number = st.number_input('Masukan Suhu rata-rata',26.30)
 prediksi_k_merah = model.predict([[number]])
-st.write(f'#### Hasil prediksi kacang merah pada suhu {number} adalah {prediksi_k_merah[0]} Ton')
+st.write(f'#### Hasil prediksi kacang merah pada suhu {number} adalah {round(prediksi_k_merah[0],2)} Ton')
 
 if st.checkbox('Tabel suhu rata-rata dengan kacang merah'):
     df3
@@ -207,7 +208,7 @@ df001
 
 number = st.number_input('masukan Suhu rata-rata',26.30)
 prediksi_apel_malang = model_2.predict([[number]])
-st.write(f'#### Hasil prediksi apel malang pada suhu {number} adalah {prediksi_apel_malang[0]} ton')
+st.write(f'#### Hasil prediksi apel malang pada suhu {number} adalah {round(prediksi_apel_malang[0],2)} ton')
 
 if st.checkbox('Tabel suhu rata-rata dan produksi apel malang'):
     df3
