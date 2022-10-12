@@ -226,7 +226,12 @@ if st.checkbox('Tabel hasil tani terbanyak dari tahun 2000 hingga 2021'):
 
 #! conclusiopn
 st.write('## Kesimpulan')
-st.write('under maintenance')
+st.write('''
+- Machine learning merupakan salah satu metode yang dapat mengetahui dampak peningkatan pemanasan global terhadap hasil pertanian.
+- Machine learning merupakan salah satu metode yang dapat memperkirakan dampak hasil produksi pertanian akibat pemanasan global selama beberapa tahun kedepan.
+- Pengetahuan tentang peningkatan hasil pertanian dapat diakses kapan saja dan dimana saja melalui aplikasi yang dibuat berbasis web.
+'''
+)
 
 #! disclaimer
 st.write('Seluruh data yang ada di dalam penelitian ini bersumber dari [Badan pusat statistik](https://www.bps.go.id), [World bank](https://climatedata.worldbank.org/ClimateAPIWeb/rest/v2/crunew/cru-ts4.06-timeseries/tas/annual/timeseries/1901-2021/country/IDN) dan penelitian terdahulu.')
